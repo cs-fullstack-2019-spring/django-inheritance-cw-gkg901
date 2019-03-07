@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'IcwApp/css/index.css' %}">
+</head>
+<body>
+
+<nav>
+    <a href="{% url 'index' %}"><img src="../../static/IcwApp/images/logo.png" height="40" width="200"/></a>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'aboutus' %}">About us</a>
+    <a href="{% url 'gallery' %}">Gallery</a>
+    <a href="{% url 'resources' %}">Resources</a>
+    <a href="{% url 'contactus' %}">Contact Us</a>
+</nav>
+
+<div class="container">
+
+<header>
+{% block header %}
+
+<h1>Welcome to CodeCrew</h1>
+
+{% endblock header %}
+    </header>
+
+
+<sidebar>
+{% block sidebar %}
+
+
+
+
+
+{% endblock sidebar %}
+</sidebar>
+
+<main>
+{% block content %}
+
+
+
+{% endblock content %}
+</main>
+
+<footer>
+{% block footer %}
+
+88 Union Avenue, 2nd Floor, Memphis, TN 38103  |  901-229-1720  |
+
+{% endblock footer %}
+</footer>
+
+</div>
+</body>
+</html>
