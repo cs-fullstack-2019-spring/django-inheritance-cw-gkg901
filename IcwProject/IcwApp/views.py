@@ -1,5 +1,5 @@
 from .forms import contactForm
-
+from .models import contactModel
 from django.http import HttpResponse
 
 from django.shortcuts import render
@@ -42,9 +42,9 @@ def contactus(request):
 
 # LISTS FORM OBJECTS
 def secret(request):
-    allForms = contactForm.objects.all()
+    allPeople = contactModel.objects.all()
     context = {
-        'form': allForms
+        'allPeople': allPeople
     }
 
     return render(request, 'IcwApp/secret.html', context)
